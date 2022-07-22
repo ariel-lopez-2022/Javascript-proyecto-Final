@@ -72,7 +72,8 @@ function dibujarCarrito(){
        total += subTotal;
       });    
       contenido.innerHTML = tabla;
-      document.getElementById("total").innerHTML ="$ "+total;
+
+      document.getElementById("total").innerHTML ="Total a Pagar $ "+total;
 }
 
 function vaciarCarrito(){
