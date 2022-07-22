@@ -1,7 +1,7 @@
 function formulario(){
     let contenido = document.getElementById("formulario");
     contenido.innerHTML = `
-    <div class="container border" >
+    <div class="container border container-formulario" >
     <h5 class="text-center">Formulario</h5>
     <div class="row g-3 mt-3">
       <div class="col-6 col-md-3">
