@@ -1,7 +1,7 @@
 function formulario(){
     let contenido = document.getElementById("formulario");
     contenido.innerHTML = `
-    <div class="container border container-formulario" >
+    
     <h5 class="text-center">Formulario</h5>
     <div class="row g-3 mt-3">
       <div class="col-6 col-md-3">
@@ -59,7 +59,7 @@ function formulario(){
        <button type="submit" class="card-btn-1" id="Enviar" ">Enviar</button>
        <button type="button" class="card-btn-1" id="Limpiar" onclick="limpiarFormulario()">Limpiar</button>
      </div>
-     </div> `
+   </div> `
 }
 function limpiarFormulario(){
   let formulario = document.getElementById("formulario");
