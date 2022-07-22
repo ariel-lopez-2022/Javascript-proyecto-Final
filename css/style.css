@@ -43,7 +43,7 @@
   }
   
   .card-contenido {
-    width: 480px;
+    min-width: 340px;
     background: #fff;
     border-radius: 18px;
     overflow: hidden;
