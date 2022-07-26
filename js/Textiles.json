@@ -1,0 +1,8 @@
+[
+    {"id":1 ,"descripcion":"Textiles", "contenidoNeto":"250ml", "fragancia":"Angel", "img":"./images/textil/textil-angel.png", "precio": 550, "cantidad":10, "color":"gradiente-celeste"},	 
+    {"id":2 ,"descripcion":"Textiles", "contenidoNeto":"250ml", "fragancia":"Amour", "img":"./images/textil/textil-amour.png", "precio": 550, "cantidad":10, "color":"gradiente-rosa"},
+    {"id":3 ,"descripcion":"Textiles", "contenidoNeto":"250ml", "fragancia":"Apolo", "img":"./images/textil/textil-apolo.png", "precio": 550, "cantidad":10, "color":"gradiente-celeste"},
+    {"id":4 ,"descripcion":"Textiles", "contenidoNeto":"250ml", "fragancia":"Apple", "img":"./images/textil/textil-apple.png", "precio": 550, "cantidad":10, "color":"gradiente-rojo"},  
+    {"id":5 ,"descripcion":"Textiles", "contenidoNeto":"250ml", "fragancia":"Cristobal", "img":"./images/textil/textil-cristobal.png", "precio": 550, "cantidad":10, "color":"gradiente-bordo"},
+    {"id":6 ,"descripcion":"Textiles", "contenidoNeto":"250ml", "fragancia":"Flores-Blancas", "img":"./images/textil/textil-flores-blancas.png", "precio": 550, "cantidad":10, "color":"gradiente-amarillo"}
+]

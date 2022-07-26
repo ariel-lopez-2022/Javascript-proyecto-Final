@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"/>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> 
@@ -26,27 +32,31 @@
     </div>
   </header>
 
- <main class="carrito container">
-  <table class="table ">
-    <thead>
-      <tr class="titulo text-center">
-        <th scope="col" class="d-none d-md-block">Foto</th>
-        <th scope="col">Desc.</th>
-        <th scope="col">Frag.</th>
-        <th scope="col">Cant.</th>
-        <th scope="col" class="d-none d-md-block">Prec.</th>
-        <th scope="col">S.total</th>
-        <th scope="col">Eliminar</th>
-      </tr>
-    </thead>
-    <tbody class ="" id="contenido-carrito"></tbody>
-  </table>
-  <div class="row d-flex justify-content-center">
-    <h5 class="text-center total" id="total"></h5>
-  </div>
-  <div class="botones d-flex justify-content-around" id="botones"></div>
+ <main class="contenido" id="datos-carrito">
+  <section class="carrito container" id="carrito"> 
+    <table class="table ">
+      <thead>
+        <tr class="titulo text-center">
+          <th scope="col" class="d-none d-md-block">Foto</th>
+          <th scope="col">Desc.</th>
+          <th scope="col">Frag.</th>
+          <th scope="col">Cant.</th>
+          <th scope="col" class="d-none d-md-block">Prec.</th>
+          <th scope="col">S.total</th>
+          <th scope="col">Eliminar</th>
+        </tr>
+      </thead>
+      <tbody class ="" id="contenido-carrito"></tbody>
+    </table>
+    <div class="row d-flex justify-content-center">
+      <h5 class="text-center total" id="total"></h5>
+    </div>
+    <div class="botones d-flex justify-content-around" id="botones"></div>
+  </section>
+  <section class="formulario container" id="seccion_formulario"></section>
 </main>    
-     <section class="formulario container " id = "formulario"></section>
+   
+
    
    <footer class="container-fluid">
     <div class="row mb-1">
@@ -58,12 +68,12 @@
     </div>
   </div>
   </footer>
-
+  
+  <script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   <script src="./js/variables.js"></script>
   <script src="./js/agregarcarrito.js"></script>
   <script src="./js/formulario.js"></script>
   <script src="./js/carrito.js"></script>
-
 </body>
 </html>

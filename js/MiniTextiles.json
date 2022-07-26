@@ -1,0 +1,8 @@
+  [  
+    {"id":1 ,"descripcion":"MiniTextiles", "contenidoNeto":"125ml", "fragancia":"Amour", "img":"./images/miniTextiles/mini-amour.png", "precio": 350, "cantidad":2, "color":"gradiente-rosa"},
+    {"id":2 ,"descripcion":"MiniTextiles", "contenidoNeto":"125ml", "fragancia":"Green", "img":"./images/miniTextiles/mini-green.png", "precio": 350, "cantidad":6, "color":"gradiente-verde"},	 
+    {"id":3 ,"descripcion":"MiniTextiles", "contenidoNeto":"125ml", "fragancia":"Lavanda", "img":"./images/miniTextiles/mini-lavanda.png", "precio": 350, "cantidad":5, "color":"gradiente-celeste"},
+    {"id":4 ,"descripcion":"MiniTextiles", "contenidoNeto":"125ml", "fragancia":"Mery", "img":"./images/miniTextiles/mini-mery.png", "precio": 350, "cantidad":6, "color":"gradiente-rojo"},  
+    {"id":5 ,"descripcion":"MiniTextiles", "contenidoNeto":"125ml", "fragancia":"One-Millon", "img":"./images/miniTextiles/mini-onemillion.png", "precio": 350, "cantidad":9, "color":"gradiente-amarillo"},
+    {"id":6 ,"descripcion":"MiniTextiles", "contenidoNeto":"125ml", "fragancia":"Oriente", "img":"./images/miniTextiles/mini-oriente.png", "precio": 350, "cantidad":7, "color":"gradiente-bordo"}
+]

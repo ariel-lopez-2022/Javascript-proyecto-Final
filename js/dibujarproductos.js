@@ -1,6 +1,10 @@
-function dibujarProductos(nombreArray){
-  let producto = obtenerProductosLS(nombreArray);
-  producto.forEach((elemento, indice)=>{
+function dibujarProductos(dato){
+  
+  fetch(`./js/${dato}.json`)
+  .then ((response)=> response.json())
+  .then((datos)=>{
+
+  datos.forEach((elemento, indice)=>{
        if(indice == 0){
           const contenido = document.getElementById("productos");
           let card = document.createElement("div");
@@ -31,7 +35,7 @@ function dibujarProductos(nombreArray){
   });
   let contenidoul = document.getElementById(`conjunto-fragancias-${contador}`);
   let lista="";
-  producto.forEach((elemento,indice)=>{
+  datos.forEach((elemento,indice)=>{
      if (elemento.cantidad > 0){
         if (indice == 0){
           lista+= `<li class ="border" id="fragancia" onclick = actualizoCard(${indice},"${elemento.descripcion}",${contador})>
@@ -42,20 +46,26 @@ function dibujarProductos(nombreArray){
         }
      }
     });   
-    
     contenidoul.innerHTML= lista;
     contador++;
+  });  
+   
+  
 }
 
-function actualizoCard(indice1, nombreArray, contador){
-  let producto = obtenerProductosLS(nombreArray);
+function actualizoCard(indice1, dato, contador){
+ 
+  fetch(`./js/${dato}.json`)
+  .then ((response)=> response.json())
+  .then((datos)=>{
+  
   let nombreFragancia = document.getElementById(`nombre-fragancia-${contador}`);
   let cantidadFragancia = document.getElementById(`cantidad-fragancia-${contador}`);
   let colorImgPrincipal = document.getElementById(`card-contenido-${contador}`);
   let botonAgregar = document.getElementById(`card-btn-${contador}`);
   let imgPrincipal = document.getElementById(`imagenPrincipal-${contador}`);
   let datosLi = document.querySelectorAll(`#conjunto-fragancias-${contador} li`)
-  producto.map((elemento,indice)=>{
+  datos.map((elemento,indice)=>{
    if (indice == indice1){
        nombreFragancia.innerHTML= elemento.fragancia;
        cantidadFragancia.innerHTML=` Disponible ${elemento.cantidad}u.`;
@@ -67,14 +77,15 @@ function actualizoCard(indice1, nombreArray, contador){
   }
 }); 
 datosLi.forEach((i,indice)=>{
-  (indice == indice1) ? (datosLi[indice].className = "border"):(datosLi[indice].className = " ");
+  (indice == indice1) ? (datosLi[indice].className = "border "):(datosLi[indice].className = " ");
 });
+  });
 }
 
 
 
 function dibujar(){
-dibujarProductos("MiniTextiles");
+dibujarProductos("Minitextiles");
 dibujarProductos("Textiles");
 dibujarProductos("Aerosoles");
 dibujarProductos("Difusores");

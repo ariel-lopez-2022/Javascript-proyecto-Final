@@ -37,6 +37,10 @@ function mensajeVaciar(){
       )
     }
   })
+}function vaciarCarrito(){
+  localStorage.removeItem("carrito");
+  dibujarCarrito();
+  botonCarrito();
 }
 
 function dibujarCarrito(){
@@ -44,12 +48,9 @@ function dibujarCarrito(){
       let botones = document.getElementById("botones");
       botones.innerHTML =`<button type="button" class="card-btn-1" id="finalizar" onclick = "formulario()">Finalizar</button>
       <button type="button" class="card-btn-1" id="vaciar" onclick = "mensajeVaciar()">Vaciar</button>`
-      
-      if (productoCarrito.length == 0){
+     if (productoCarrito.length == 0){
         let botones = document.getElementById("finalizar");
         let botones1 = document.getElementById("vaciar");
-        let formulario = document.getElementById("formulario");
-        formulario.remove();
         botones.remove();
         botones1.remove();
       } 
@@ -60,13 +61,13 @@ function dibujarCarrito(){
      productoCarrito.forEach((elemento)=>{
        subTotal = elemento.precio * elemento.cantidad ;  
        tabla+= `<tr class="text-center carrito-productos">
-       <td scope="row" class="d-none d-md-block"><img src="${elemento.img}" width="30" class="img-fluid" alt="elimina"></th>
+       <td scope="row" class="d-none d-md-block"><img src="${elemento.img}" width="60" class="img-fluid" alt="elimina"></th>
        <td>${elemento.descripcion}</td>
        <td>${elemento.fragancia}</td>
        <td>${elemento.cantidad}</td>
        <td class="d-none d-md-block">$ ${elemento.precio}</td>
        <td>$ ${subTotal}</td>
-       <td><img src="./iconos/borrar.png" width="20" class="img-fluid" alt="elimina"onclick = mensajeEliminar(${elemento.id},"${elemento.descripcion}") ></td>
+       <td class="eliminar"><img src="./iconos/borrar.png" width="30" class="img-fluid" alt="elimina"onclick = mensajeEliminar(${elemento.id},"${elemento.descripcion}") ></td>
      </tr>`
     
        total += subTotal;
@@ -74,13 +75,11 @@ function dibujarCarrito(){
       contenido.innerHTML = tabla;
 
       document.getElementById("total").innerHTML ="Total a Pagar $ "+total;
-}
+    }
 
-function vaciarCarrito(){
-  localStorage.removeItem("carrito");
-  dibujarCarrito();
-  botonCarrito();
-}
+
+
+
 
 function eliminaProducto(id, descripcion){
   let productoCarrito = obtenercarritoLS();
@@ -93,5 +92,6 @@ function eliminaProducto(id, descripcion){
   dibujarCarrito();
   botonCarrito();
 }
+
 botonCarrito();
 dibujarCarrito();

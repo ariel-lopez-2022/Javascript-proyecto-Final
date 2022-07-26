@@ -1,0 +1,8 @@
+[
+    {"id":1 ,"descripcion":"Aerosoles", "contenidoNeto":"185g", "fragancia":"Bamboo", "img":"./images/aerosol/lata-bamboo.png", "precio": 750, "cantidad":10, "color":"gradiente-verde"},
+    {"id":2 ,"descripcion":"Aerosoles", "contenidoNeto":"185g", "fragancia":"Bebe", "img":"./images/aerosol/lata-bebe.png", "precio": 750, "cantidad":10, "color":"gradiente-amarillo"},	 
+    {"id":3 ,"descripcion":"Aerosoles", "contenidoNeto":"185g", "fragancia":"Green", "img":"./images/aerosol/lata-green.png", "precio": 750, "cantidad":10, "color":"gradiente-verde"},
+    {"id":4 ,"descripcion":"Aerosoles", "contenidoNeto":"185g", "fragancia":"Limon", "img":"./images/aerosol/lata-limon.png", "precio": 750, "cantidad":10, "color":"gradiente-amarillo"},  
+    {"id":5 ,"descripcion":"Aerosoles", "contenidoNeto":"185g", "fragancia":"Mandarina", "img":"./images/aerosol/lata-mandarina.png", "precio": 750, "cantidad":10, "color":"gradiente-rojo" },
+    {"id":6 ,"descripcion":"Aerosoles", "contenidoNeto":"185g", "fragancia":"Paula", "img":"./images/aerosol/lata-paula.png", "precio": 750, "cantidad":10, "color":"gradiente-marron"}
+]

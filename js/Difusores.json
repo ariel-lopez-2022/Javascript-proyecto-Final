@@ -1,0 +1,8 @@
+[ 
+    {"id":1 ,"descripcion":"Difusores", "contenidoNeto":"125ml", "fragancia":"Apple", "img":"./images/difusor/difusor-apple.png", "precio": 1000, "cantidad":10, "color":"gradiente-rojo"},
+    {"id":2 ,"descripcion":"Difusores", "contenidoNeto":"125ml", "fragancia":"Amour", "img":"./images/difusor/difusor-amour.png", "precio": 1000, "cantidad":10, "color":"gradiente-rosa"},	 
+    {"id":3 ,"descripcion":"Difusores", "contenidoNeto":"125ml", "fragancia":"Bebe", "img":"./images/difusor/difusor-bebe.png", "precio": 1000, "cantidad":10, "color":"gradiente-amarillo"},
+    {"id":4 ,"descripcion":"Difusores", "contenidoNeto":"125ml", "fragancia":"Cappucino","img":"./images/difusor/difusor-cappuccino.png", "precio": 1000, "cantidad":10, "color":"gradiente-marron"},  
+    {"id":5 ,"descripcion":"Difusores", "contenidoNeto":"125ml", "fragancia":"Flowers", "img":"./images/difusor/difusor-flowers.png", "precio": 1000, "cantidad":10, "color":"gradiente-rojo"},
+    {"id":6 ,"descripcion":"Difusores", "contenidoNeto":"125ml", "fragancia":"Bamboo", "img":"./images/difusor/difusor-bamboo.png", "precio": 1000, "cantidad":10, "color":"gradiente-verde"}
+]
