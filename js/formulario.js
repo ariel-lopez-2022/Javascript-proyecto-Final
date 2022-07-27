@@ -127,8 +127,8 @@ function mensajeFinal(nombre, correo){
       contenido.innerHTML=
     `<div class="container pt-3 d-flex justify-content-center">
        <div class="alert row " role="alert">
-       <p class="text-center">Gracias!! ${nombre} por su compra , se enviara un mail a ${correo} con los detalles de su compra,</p>
-       <a class="text-center" href="../index.html">Volver a Inicio</a>
+       <p class="text-center">Gracias!! ${nombre} por su compra , se envio un email a ${correo} con los detalles de su compra,</p>
+       <a class="text-center" href="index.html">Volver a Inicio</a>
        </div>
      </div>`
     },2000);
