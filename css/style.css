@@ -200,13 +200,15 @@
   }
   .formulario__label {
     display: block;
+    font-size: 0.7rem;
     font-weight: 700;
-    padding: 10px;
     cursor: pointer;
+    margin-left: 5px;
   }
   
   .formulario__grupo-input {
     position: relative;
+    margin: 5px;
   }
   
   .formulario__input {
@@ -217,7 +219,6 @@
     border-radius: 3px;
     height: 45px;
     line-height: 45px;
-   
     transition: .3s ease all;
   }
   
