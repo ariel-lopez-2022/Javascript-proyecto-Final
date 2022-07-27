@@ -41,6 +41,7 @@ function mensajeVaciar(){
   localStorage.removeItem("carrito");
   dibujarCarrito();
   botonCarrito();
+  
 }
 
 function dibujarCarrito(){

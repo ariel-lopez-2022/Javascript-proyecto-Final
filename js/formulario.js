@@ -1,3 +1,4 @@
+
 function formulario(){
      document.getElementById("botones").innerHTML="";
      let eliminar= document.querySelectorAll(".eliminar");
@@ -29,7 +30,7 @@ function formulario(){
       <p class="formulario__input-error">El Domicilio tiene que ser de 4 a 20 dígitos y solo puede contener numeros, letras.</p>
     </div>
      <!-- Grupo: Teléfono -->
-			<div class="formulario__grupo col-6" id="grupo__telefono">
+			<div class="formulario__grupo col-12 col-md-6" id="grupo__telefono">
 				<label for="telefono" class="formulario__label">Teléfono</label>
 				<div class="formulario__grupo-input">
 					<input type="text" class="formulario__input " name="telefono" id="telefono" >
@@ -38,7 +39,7 @@ function formulario(){
 				<p class="formulario__input-error">El telefono solo puede contener numeros, minimo 7 y el maximo son 14 numeros.</p>
 			</div>
       <!-- Grupo: Correo Electronico -->
-			<div class="formulario__grupo col-6" id="grupo__correo">
+			<div class="formulario__grupo col-12 col-md-6" id="grupo__correo">
 				<label for="correo" class="formulario__label">Correo</label>
 				<div class="formulario__grupo-input">
 					<input type="email" class="formulario__input" name="correo" id="correo" >
@@ -103,7 +104,9 @@ const validarCampo = (exprecion, input, campo)=>{
   }
 }
 
-function mensajeFinal(nombre, domicilio, correo){
+function mensajeFinal(nombre, correo){
+ 
+  console.log (nombre)
   let contenido = document.getElementById("datos-carrito");
   contenido.innerHTML =` <div class="overlay container ">
   <span class="uat-loader row  justify-content-center ">
@@ -121,11 +124,17 @@ function mensajeFinal(nombre, domicilio, correo){
     localStorage.removeItem("carrito");
     botonCarrito();
     setTimeout(() => {
-      document.getElementById("datos-carrito").innerHTML=""
+      contenido.innerHTML=
+    `<div class="container pt-3 d-flex justify-content-center">
+       <div class="alert row " role="alert">
+       <p class="text-center">Gracias!! ${nombre} por su compra , se enviara un mail a ${correo} con los detalles de su compra,</p>
+       <a class="text-center" href="../index.html">Volver a Inicio</a>
+       </div>
+     </div>`
     },2000);
    }, 3000);
   
- 
+  
 };
 
 function validar() {
@@ -141,10 +150,8 @@ function validar() {
       icono.classList.remove("formulario__grupo-correcto");
        
       })
-       
-      mensajeFinal(nombre.value, domicilio.value, correo.value);
+      mensajeFinal(nombre.value.toLowerCase(),correo.value);
       formulario.reset();
-
     } else{
       document.getElementById("formulario__mensaje").classList.add("formulario__mensaje-activo");
     }

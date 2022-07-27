@@ -9,7 +9,7 @@ function botonCarrito() {
     let cantidad =0;
     if(productos.length > 0){
        productos.forEach((elemento)=>{cantidad+= elemento.cantidad});
-        contenido = `<button type="button" class="btn position-relative onclick =">
+        contenido = `<button type="button" class="btn position-relative">
         <a href="carrito.html"><img src=" ./images/carrito.png" width="45"></a>
           <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="">${cantidad}
           <span class="visually-hidden">unread messages</span>
@@ -21,7 +21,6 @@ function botonCarrito() {
 
 function agregarCarrito(id, dato){
   let productoCarrito = obtenercarritoLS();
-  console.log(productoCarrito);
   fetch(`./js/${dato}.json`)
   .then ((response)=> response.json())
   .then((datos)=>{

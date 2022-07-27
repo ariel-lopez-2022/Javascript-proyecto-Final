@@ -1,10 +1,8 @@
 function dibujarProductos(dato){
-  console.log(dato);
   fetch(`./js/${dato}.json`)
   .then ((response)=> response.json())
   .then((datos)=>{
-
-  datos.forEach((elemento, indice)=>{
+   datos.forEach((elemento, indice)=>{
        if(indice == 0){
           const contenido = document.getElementById("productos");
           let card = document.createElement("div");
@@ -31,7 +29,6 @@ function dibujarProductos(dato){
         </div>`; 
         contenido.appendChild(card);
         }
-    
   });
   let contenidoul = document.getElementById(`conjunto-fragancias-${contador}`);
   let lista="";
@@ -49,16 +46,12 @@ function dibujarProductos(dato){
     contenidoul.innerHTML= lista;
     contador++;
   });  
-   
-  
 }
 
 function actualizoCard(indice1, dato, contador){
- 
   fetch(`./js/${dato}.json`)
   .then ((response)=> response.json())
   .then((datos)=>{
-  
   let nombreFragancia = document.getElementById(`nombre-fragancia-${contador}`);
   let cantidadFragancia = document.getElementById(`cantidad-fragancia-${contador}`);
   let colorImgPrincipal = document.getElementById(`card-contenido-${contador}`);
@@ -73,16 +66,14 @@ function actualizoCard(indice1, dato, contador){
        botonAgregar.className =`card-btn ${elemento.color}` ;
        imgPrincipal.src = elemento.img;
        botonAgregar.setAttribute("onclick", `agregarCarrito(${elemento.id},"${elemento.descripcion}")`);
-       
-  }
+         
+   }
 }); 
 datosLi.forEach((i,indice)=>{
   (indice == indice1) ? (datosLi[indice].className = "border "):(datosLi[indice].className = " ");
 });
   });
 }
-
-
 
 function dibujar(){
 dibujarProductos("MiniTextiles");
