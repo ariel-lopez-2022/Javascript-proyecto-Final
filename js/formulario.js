@@ -105,8 +105,7 @@ const validarCampo = (exprecion, input, campo)=>{
 }
 
 function mensajeFinal(nombre, correo){
- 
-  console.log (nombre)
+  nombre.toLowerCase();
   let contenido = document.getElementById("datos-carrito");
   contenido.innerHTML =` <div class="overlay container ">
   <span class="uat-loader row  justify-content-center ">
