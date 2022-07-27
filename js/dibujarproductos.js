@@ -1,5 +1,5 @@
 function dibujarProductos(dato){
-  
+  console.log(dato);
   fetch(`./js/${dato}.json`)
   .then ((response)=> response.json())
   .then((datos)=>{
@@ -85,7 +85,7 @@ datosLi.forEach((i,indice)=>{
 
 
 function dibujar(){
-dibujarProductos("Minitextiles");
+dibujarProductos("MiniTextiles");
 dibujarProductos("Textiles");
 dibujarProductos("Aerosoles");
 dibujarProductos("Difusores");
