@@ -1,5 +1,5 @@
 function dibujarProductos(dato){
-  fetch(`./js/${dato}.json`)
+  fetch(`./json/${dato}.json`)
   .then ((response)=> response.json())
   .then((datos)=>{
    datos.forEach((elemento, indice)=>{
@@ -35,7 +35,7 @@ function dibujarProductos(dato){
   datos.forEach((elemento,indice)=>{
      if (elemento.cantidad > 0){
         if (indice == 0){
-          lista+= `<li class ="border" id="fragancia" onclick = actualizoCard(${indice},"${elemento.descripcion}",${contador})>
+          lista+= `<li class ="borde" id="fragancia" onclick = actualizoCard(${indice},"${elemento.descripcion}",${contador})>
           <img src=${elemento.img}  width="45" alt="${elemento.fragancia}"></li>`
         } else{
         lista+= `<li class =" " id="fragancia" onclick = actualizoCard(${indice},"${elemento.descripcion}",${contador})>
@@ -49,7 +49,7 @@ function dibujarProductos(dato){
 }
 
 function actualizoCard(indice1, dato, contador){
-  fetch(`./js/${dato}.json`)
+  fetch(`./json/${dato}.json`)
   .then ((response)=> response.json())
   .then((datos)=>{
   let nombreFragancia = document.getElementById(`nombre-fragancia-${contador}`);
@@ -70,7 +70,7 @@ function actualizoCard(indice1, dato, contador){
    }
 }); 
 datosLi.forEach((i,indice)=>{
-  (indice == indice1) ? (datosLi[indice].className = "border "):(datosLi[indice].className = " ");
+  (indice == indice1) ? (datosLi[indice].className = "borde"):(datosLi[indice].className = " ");
 });
   });
 }

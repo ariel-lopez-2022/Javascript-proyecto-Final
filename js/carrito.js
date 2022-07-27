@@ -15,6 +15,7 @@ function mensajeEliminar(id, descripcion){
         'Su Producto fue eliminado.',
         'success'
       )
+      dibujarCarrito();
     }
   })
 }
@@ -34,13 +35,32 @@ function mensajeVaciar(){
         'Eliminado',
         'Su Carrito fue eliminado.',
         'success'
+        
       )
+      dibujarCarrito();
     }
+    
   })
+  
+ 
+
 }function vaciarCarrito(){
   localStorage.removeItem("carrito");
-  dibujarCarrito();
   botonCarrito();
+  dibujarCarrito();
+  
+  
+}
+function eliminaProducto(id, descripcion){
+  let productoCarrito = obtenercarritoLS();
+  let posicionEliminar = productoCarrito.findIndex(x => x.id == id && x.descripcion == descripcion);
+  productoCarrito[posicionEliminar].cantidad -=1;
+  if (productoCarrito[posicionEliminar].cantidad == 0){
+      productoCarrito.splice(posicionEliminar,1);
+  }
+  guardarCarritoLS(productoCarrito);
+  botonCarrito();
+  dibujarCarrito();
   
 }
 
@@ -49,12 +69,14 @@ function dibujarCarrito(){
       let botones = document.getElementById("botones");
       botones.innerHTML =`<button type="button" class="card-btn-1" id="finalizar" onclick = "formulario()">Finalizar</button>
       <button type="button" class="card-btn-1" id="vaciar" onclick = "mensajeVaciar()">Vaciar</button>`
-     if (productoCarrito.length == 0){
+      if (productoCarrito.length === 0){
         let botones = document.getElementById("finalizar");
         let botones1 = document.getElementById("vaciar");
         botones.remove();
         botones1.remove();
-      } 
+        carriroVacio(); 
+      }
+   
   let contenido = document.getElementById("contenido-carrito");
   let tabla = "";
   subTotal =0;
@@ -70,29 +92,26 @@ function dibujarCarrito(){
        <td>$ ${subTotal}</td>
        <td class="eliminar"><img src="./iconos/borrar.png" width="30" class="img-fluid" alt="elimina"onclick = mensajeEliminar(${elemento.id},"${elemento.descripcion}") ></td>
      </tr>`
-    
        total += subTotal;
       });    
       contenido.innerHTML = tabla;
-
-      document.getElementById("total").innerHTML ="Total a Pagar $ "+total;
+     document.getElementById("total").innerHTML ="Total a Pagar $ "+total;
     }
 
+    
 
-
-
-
-function eliminaProducto(id, descripcion){
-  let productoCarrito = obtenercarritoLS();
-  let posicionEliminar = productoCarrito.findIndex(x => x.id == id && x.descripcion == descripcion);
-  productoCarrito[posicionEliminar].cantidad -=1;
-  if (productoCarrito[posicionEliminar].cantidad == 0){
-      productoCarrito.splice(posicionEliminar,1);
-  }
-  guardarCarritoLS(productoCarrito);
-  dibujarCarrito();
-  botonCarrito();
-}
-
-botonCarrito();
+    function carriroVacio(){
+      Swal.fire({
+        title: 'Carrito Vacio !!!',
+        icon: 'warning',
+        confirmButtonColor: '#3085d6',
+        confirmButtonText: 'OK'
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.href = "index.html";
+        }
+      })
+    }
+  
+ 
 dibujarCarrito();
